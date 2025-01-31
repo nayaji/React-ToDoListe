@@ -1,0 +1,50 @@
+
+/* Conteneur principal de l'application */
+.todo-container {
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Titre principal */
+  .todo-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Champ de saisie pour ajouter une nouvelle tâche */
+  .todo-input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Bouton pour ajouter une tâche */
+  .add-btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Liste des tâches */
+  .todo-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  /* Case à cocher des tâches */
+  .todo-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
