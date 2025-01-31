@@ -8,7 +8,10 @@
 /* Conteneur principal de l'application */
 .todo-container {
     max-width: 700px;
-    margin: 20px auto;
+    margin: 60px auto;
+    border-radius: 15px;
+    justify-content: center;
+    padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #21ce38;
   }
