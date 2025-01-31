@@ -25,7 +25,7 @@ export default function TodoApp() {
 
   return (
     <div className="todo-container">
-      <h1>My Todo App</h1>
+      <h1>Nayaji - ToDoApp</h1>
       <input
         type="text"
         placeholder="Type a new todo"
@@ -34,9 +34,9 @@ export default function TodoApp() {
         className="todo-input"
       />
       <button onClick={addTodo} className="add-btn">
-        Add Todo
+        Add Tasks
       </button>
-      <h3>Todos</h3>
+      <h3>Enregistrement des tâches dans "localStorage"</h3>
       <ul className="todo-list">
         {todos.map((todo, index) => (
           <li key={index} className="todo-item">
