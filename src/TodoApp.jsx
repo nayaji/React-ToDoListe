@@ -37,6 +37,8 @@ export default function TodoApp() {
         Add Tasks
       </button>
       <h3>Enregistrement des tâches dans "localStorage"</h3>
+      <h3>Ouvrez votre "inspector", Application, Storage, Local storage</h3>
+      <h3>vous pourrez suprimer les tasks à la main et ensuite refresh</h3>
       <ul className="todo-list">
         {todos.map((todo, index) => (
           <li key={index} className="todo-item">
