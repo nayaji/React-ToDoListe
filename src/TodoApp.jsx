@@ -4,7 +4,7 @@ import "./TodoApp.css"; // Importation du fichier CSS
 export default function TodoApp() {
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem("todos");
-    return savedTodos ? JSON.parse(savedTodos) : ["Learn React", "Be Awesome!"];
+    return savedTodos ? JSON.parse(savedTodos) : [];
   });
 
   const [newTodo, setNewTodo] = useState("");
@@ -16,6 +16,13 @@ export default function TodoApp() {
       setNewTodo("");
     }
   };
+
+    // Fonction pour supprimer une tâche spécifique
+    const deleteTodo = (index) => {
+      const updatedTodos = todos.filter((todo, todoIndex) => todoIndex !== index);
+      setTodos(updatedTodos);
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    };
 
   useEffect(() => {
     if (todos.length > 0) {
@@ -46,6 +53,19 @@ export default function TodoApp() {
           <li key={index} className="todo-item">
             <input type="checkbox" />
             {todo}
+            <button 
+              onClick={() => deleteTodo(index)} 
+              style={{
+                marginLeft: "10px", 
+                backgroundColor: "red", 
+                color: "white", 
+                border: "none", 
+                borderRadius: "4px", 
+                padding: "5px 10px", 
+                cursor: "pointer"
+              }}>
+              Supprimer
+            </button>
           </li>
         ))}
       </ul>
