@@ -9,6 +9,8 @@ export default function TodoApp() {
 
   const [newTodo, setNewTodo] = useState("");
 
+
+  // Fonction pour ajouter une tâche spécifique
   const addTodo = () => {
     if (newTodo.trim() !== "") {
       const updatedTodos = [...todos, newTodo];
@@ -43,10 +45,6 @@ export default function TodoApp() {
       <button onClick={addTodo} className="add-btn">
         Add Tasks
       </button>
-      <h3>Enregistrement des tâches dans "localStorage"</h3>
-      <h3>- Ouvrez votre "inspector", Application, Storage, Local storage</h3>
-      <h3>- vous pourrez supprimer les tâches à la main et ensuite refresh</h3>
-      <h3>___________</h3>
       <h3>ToDoListe</h3>
       <ul className="todo-list">
         {todos.map((todo, index) => (
